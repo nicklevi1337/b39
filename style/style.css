@@ -154,6 +154,17 @@ body {
   color: #c00e;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .circle {
   display: inline-block;
   background-color: #c00e; /* Красный фон */
@@ -161,28 +172,31 @@ body {
   font-weight: bold;
   border-radius: 50%; /* Круглая форма */
   text-align: center;
-  line-height: 30px; /* Выравнивание текста по центру */
-  font-size: 16px; /* Начальный размер шрифта */
+  line-height: 80px; /* Выравнивание текста по центру */
+  font-size: 36px; /* Большой шрифт по умолчанию */
   vertical-align: middle; /* Выровнять по вертикали с текстом */
+  margin-left: 20px; /* Отступ между текстом и кругом */
 }
 
 /* От 320px до 560px - маленький круг */
 @media (min-width: 320px) and (max-width: 560px) {
   .circle {
-    width: 40px; /* Маленький круг */
-    height: 40px; /* Маленький круг */
-    font-size: 14px; /* Маленький шрифт */
-    line-height: 40px; /* Выравнивание текста по центру */
+    width: 60px; /* Маленький круг */
+    height: 60px; /* Маленький круг */
+    font-size: 25px; /* Маленький шрифт */
+    line-height: 60px; /* Выравнивание текста по центру */
+    margin-left: 15px; /* Отступ для маленьких экранов */
   }
 }
 
 /* От 561px до 768px - чуть больше круг */
 @media (min-width: 561px) and (max-width: 768px) {
   .circle {
-    width: 50px; /* Чуть больше круг */
-    height: 50px; /* Чуть больше круг */
-    font-size: 20px; /* Чуть больший шрифт */
-    line-height: 50px; /* Выравнивание текста по центру */
+    width: 60px; /* Чуть больше круг */
+    height: 60px; /* Чуть больше круг */
+    font-size: 24px; /* Чуть больший шрифт */
+    line-height: 60px; /* Выравнивание текста по центру */
+    margin-left: 20px; /* Отступ для средних экранов */
   }
 }
 
@@ -191,8 +205,9 @@ body {
   .circle {
     width: 80px; /* Нормальный круг */
     height: 80px; /* Нормальный круг */
-    font-size: 28px; /* Нормальный шрифт */
+    font-size: 36px; /* Нормальный шрифт */
     line-height: 80px; /* Выравнивание текста по центру */
+    margin-left: 20px; /* Отступ для больших экранов */
   }
 }
 
@@ -674,6 +689,16 @@ body {
   margin-bottom: 10px;
 }
 
+.email {
+  color: #c00e; /* Цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+
+}
+
+.email:hover {
+  opacity: 0.6;
+}
+
 .contact-block .email {
   font-size: 22px;
   color: #c00e;
@@ -684,6 +709,7 @@ body {
 .contact-block .share-text {
   font-size: 14px;
   color: #333;
+  margin-top: 30px;
 }
 
 /* Футер */
