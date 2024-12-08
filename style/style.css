@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'PFDinRegular';
-  src: url('style/fonts/PFDinRegular.woff2') format('woff2'),
-       url('style/fonts/PFDinRegular.woff') format('woff'),
+  src: 
        url('../fonts/PfdindisplayproRegular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -155,16 +154,47 @@ body {
   color: #c00e;
 }
 
+.circle {
+  display: inline-block;
+  background-color: #c00e; /* Красный фон */
+  color: white;
+  font-weight: bold;
+  border-radius: 50%; /* Круглая форма */
+  text-align: center;
+  line-height: 30px; /* Выравнивание текста по центру */
+  font-size: 16px; /* Начальный размер шрифта */
+  vertical-align: middle; /* Выровнять по вертикали с текстом */
+}
 
+/* От 320px до 560px - маленький круг */
+@media (min-width: 320px) and (max-width: 560px) {
+  .circle {
+    width: 40px; /* Маленький круг */
+    height: 40px; /* Маленький круг */
+    font-size: 14px; /* Маленький шрифт */
+    line-height: 40px; /* Выравнивание текста по центру */
+  }
+}
 
+/* От 561px до 768px - чуть больше круг */
+@media (min-width: 561px) and (max-width: 768px) {
+  .circle {
+    width: 50px; /* Чуть больше круг */
+    height: 50px; /* Чуть больше круг */
+    font-size: 20px; /* Чуть больший шрифт */
+    line-height: 50px; /* Выравнивание текста по центру */
+  }
+}
 
-
-
-
-
-
-
-
+/* С 768px и выше - нормальный размер */
+@media (min-width: 768px) {
+  .circle {
+    width: 80px; /* Нормальный круг */
+    height: 80px; /* Нормальный круг */
+    font-size: 28px; /* Нормальный шрифт */
+    line-height: 80px; /* Выравнивание текста по центру */
+  }
+}
 
 /* Первый блок */
 .hero {
@@ -197,6 +227,7 @@ body {
   color: white;
   text-transform: uppercase; /* Все буквы заглавные */
   margin: 0;
+  display: inline-block; /* Обеспечивает выравнивание с кругом */
 }
 
 /* Адаптивность */
@@ -225,9 +256,6 @@ body {
     font-size: 38px; /* Уменьшаем размер шрифта на маленьких экранах */
   }
 }
-
-
-
 
 
 
@@ -347,14 +375,29 @@ body {
 
 
 
+/* Стили для главного оглавления */
+.main-heading {
+  text-align: center;
+  margin-bottom: 40px; /* Отступ снизу */
+}
+
+.main-heading h1 {
+  font-size: 36px; /* Размер шрифта */
+  color: #c00e; /* Красный цвет */
+  font-weight: bold;
+}
 
 
 
+@media (max-width: 425px) {
+  .main-heading h1 {
+    font-size: 30px; /* Размер шрифта */
+ 
+  }
+  
 
 
-
-
-
+}
 
 
 
@@ -465,8 +508,6 @@ body {
       margin-bottom: 10px; /* Отступ между иконкой и текстом */
   }
 }
-
-
 
 
 
@@ -595,8 +636,6 @@ body {
 
 
 
-
-
 /* Контакты */
 .contact-block {
   padding: 80px 20px;
@@ -610,6 +649,18 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+
+
+@media (max-width: 425px) {
+  .contact-block h2 {
+    font-size: 26px;
+   
+  }
+}
+
+
+
 
 .contact-block p {
   font-size: 18px;
@@ -643,7 +694,7 @@ body {
   display: flex;
   flex-direction: column; /* Для мобильных устройств лого и текст расположены друг под другом */
   align-items: center;
-  gap: 10px; /* Отступ между лого и текстом */
+  gap: 30px; /* Отступ между лого и текстом */
 }
 
 .footer img {
@@ -772,6 +823,15 @@ body {
   margin-bottom: 40px;
   font-weight: bold;
   text-transform: uppercase; /* Заглавные буквы */
+}
+
+
+
+@media (max-width: 425px) {
+  .left-location-text h1 {
+    font-size: 1.4rem;
+   
+  }
 }
 
 .left-location-text p {
@@ -974,3 +1034,5 @@ body {
 .callback-menu img:hover {
   transform: scale(1.2); 
 }
+
+
