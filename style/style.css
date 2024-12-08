@@ -1,12 +1,11 @@
-/* Подключение шрифта TildaSans */
 @font-face {
-    font-family: 'TildaSans';
-    src: url('TildaSans.woff2') format('woff2'),
-         url('TildaSans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'PFDinRegular';
+  src: url('style/fonts/PFDinRegular.woff2') format('woff2'),
+       url('style/fonts/PFDinRegular.woff') format('woff'),
+       url('../fonts/PfdindisplayproRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 /* Общие стили */
 * {
   margin: 0;
@@ -17,9 +16,13 @@
 body {
   line-height: 1.6;
   color: #fff;
-  font-family: 'TildaSans', Arial, sans-serif;
+  font-family: 'PFDinRegular', sans-serif;
   background-color: #fffdfb;
 }
+
+
+
+
 
 /* Хедер */
 .header {
@@ -48,8 +51,118 @@ body {
 }
 
 .header .nav a:hover {
-  text-decoration: underline;
+  color: #7e0000;
 }
+
+
+/* Базовые стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 20px; /* Отступ сверху для логотипа и меню */
+}
+
+.burger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 30px; /* Отступ снизу */
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Показывать бургер меню на мобильных устройствах */
+@media (max-width: 1000px) {
+  .burger {
+    display: flex;
+  }
+
+  .header .nav {
+    display: none; /* Скрыть навигацию для мобильных устройств */
+  }
+
+  .burger-menu.open {
+    transform: translateY(0);
+  }
+}
+
+/* Стили для закрытия бургер-меню */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+
+
+.burger-menu a:hover {
+  color: #c00e;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -115,106 +228,6 @@ body {
 
 
 
-
-
-
-
-/* Базовые стили для бургер-меню */
-.burger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.burger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  transition: 0.3s;
-}
-
-.burger-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-  padding-top: 20px; /* Отступ сверху для логотипа и меню */
-}
-
-.burger-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-.burger-menu a:hover {
-  text-decoration: underline;
-}
-
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 20px;
-  margin-bottom: 30px; /* Отступ снизу */
-  align-items: center;
-}
-
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 36px;
-  cursor: pointer;
-}
-
-/* Показывать бургер меню на мобильных устройствах */
-@media (max-width: 1000px) {
-  .burger {
-    display: flex;
-  }
-
-  .header .nav {
-    display: none; /* Скрыть навигацию для мобильных устройств */
-  }
-
-  .burger-menu.open {
-    transform: translateY(0);
-  }
-}
-
-/* Стили для закрытия бургер-меню */
-.burger.open span:nth-child(1) {
-  transform: rotate(45deg);
-  position: relative;
-  top: 8px;
-}
-
-.burger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  position: relative;
-  top: -8px;
-}
 
 
 
@@ -432,7 +445,7 @@ body {
 
 /* Дополнительные стили */
 .red-text {
-  color: red; /* Красный текст */
+  color: #c00e; /* Красный текст */
   font-weight: bold; /* Жирный шрифт для акцента */
 }
 
@@ -480,7 +493,7 @@ body {
 .slider-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #333;
 }
 
@@ -540,7 +553,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px; /* Добавляем пространство между слайдером и точками */
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .dot {
@@ -555,11 +568,11 @@ body {
 }
 
 .dot:hover {
-  background-color: #c40303; /* Белый цвет при наведении */
+  background-color: #c00e; /* Белый цвет при наведении */
 }
 
 .active {
-  background-color: #e60000; /* Белый цвет для активной точки */
+  background-color: #c00e; /* Белый цвет для активной точки */
 }
 
 /* Адаптивность */
@@ -612,9 +625,9 @@ body {
 
 .contact-block .email {
   font-size: 22px;
-  color: red;
+  color: #c00e;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .contact-block .share-text {
@@ -626,22 +639,86 @@ body {
 .footer {
   background-color: #111;
   color: white;
-  text-align: center;
   padding: 20px;
-  position: relative;
+  display: flex;
+  flex-direction: column; /* Для мобильных устройств лого и текст расположены друг под другом */
+  align-items: center;
+  gap: 10px; /* Отступ между лого и текстом */
+}
+
+.footer img {
+  max-width: 150px; /* Размер логотипа, адаптируется к разным экранам */
+  height: auto; /* Сохраняет пропорции изображения */
 }
 
 .footer p {
   font-size: 14px;
   margin: 0;
+  text-align: center; /* Центрирование текста */
+  max-width: 90%; /* Ограничение ширины текста на маленьких экранах */
+  line-height: 1.5; /* Увеличивает читаемость текста */
+}
+
+/* Адаптация для больших экранов */
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row; /* Лого и текст в одной строке */
+    justify-content: space-between; /* Разделяет лого и текст */
+    align-items: center;
+  }
+
+  .footer p {
+    text-align: left; /* Выровнять текст слева на больших экранах */
+    max-width: none; /* Убирает ограничение ширины текста */
+  }
 }
 
 
 
+/* Телефон и иконки в одной строке */
+.phone-and-icons {
+  display: flex;
+  align-items: center; /* Выравнивание элементов по вертикали */
+  justify-content: center; /* Центрируем блок */
+  gap: 10px; /* Расстояние между номером и иконками */
+ 
+}
 
+/* Иконки мессенджеров */
+.messenger-icons {
+  display: flex;
+  gap: 10px; /* Расстояние между иконками */
+}
 
+.messenger-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+.messenger-icons img:hover {
+  transform: scale(1.2); /* Увеличение при наведении */
+}
 
+/* Завлекательный текст */
+.additional-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.highlight-link {
+  color:  #c00e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.highlight-link:hover {
+  opacity: 0.5;
+  color:  #c00e;
+}
 
 
 
@@ -692,7 +769,7 @@ body {
 /* Заголовок и текст внутри левого блока */
 .left-location-text h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-weight: bold;
   text-transform: uppercase; /* Заглавные буквы */
 }
@@ -794,4 +871,106 @@ body {
   width: 100%;
   height: 100%;
   border: none; /* Убираем рамку */
+}
+
+
+
+/* Кнопка прокрутки наверх */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Отступ от нижнего края */
+  left: 20px; /* Отступ от правого края */
+
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Изначально скрыта */
+  transform: translateY(50px); /* Смещена вниз */
+  visibility: hidden; /* Не видна для кликов */
+}
+
+.scroll-to-top svg {
+  fill: #fff; /* Цвет стрелки */
+}
+
+.scroll-to-top:hover {
+  transform: translateY(0) scale(1.1); /* Легкое увеличение при наведении */
+
+}
+
+/* Показываем кнопку, когда она активна */
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Основной контейнер */
+.callback-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 42px;
+  z-index: 1000;
+}
+
+/* Кнопка */
+.callback-button {
+  background-color: #c00e;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.callback-button:hover {
+  transform: scale(1.1);
+}
+
+/* Меню с иконками */
+.callback-menu {
+  position: absolute;
+  bottom: 60px; /* Отступ от кнопки */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  display: none; /* Скрываем меню по умолчанию */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.callback-menu a {
+  display: inline-block;
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.callback-menu img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.callback-menu img:hover {
+  transform: scale(1.2); 
 }

@@ -54,8 +54,8 @@
             <!-- Левый текст сверху -->
             <div class="top-left-text">
                 <h1>Нежилое здание гаражного комплекса</h1>
-                <h3 class="subheading">Общая площадь - 16 232 м²</h3>
-                <h3 class="subheading">Земельный участок - 6 286 м²</h3>
+                <h3 class="subheading">Общая площадь - <span style="color: #c00e">16 232 м²</span></h3>
+                <h3 class="subheading">Земельный участок - <span style="color: #c00e">6 286 м²</span></h3>
             </div>
 
             <!-- Блок с изображением и правым текстом -->
@@ -82,7 +82,7 @@
                     <p>- Автомобильные мойки;</p>
                     <p>- Ремонт автомобилей</p>
                     <br>
-                    <p> Кадастровый номер: <strong>77:06:0012020:1074</strong></p>
+                    <p> Кадастровый номер: <strong style="color: #c00e">77:06:0012020:1074</strong></p>
                 </div>
             </div>
         </div>
@@ -110,7 +110,7 @@
                     <img src="img/home-button.png" alt="Иконка дома">
                 </div>
                 <div class="info-content">
-                    <h3>Информация по зданию</h3>
+                    <h3 >Информация по зданию</h3>
                     <p><strong>Площадь Здания:</strong> S = 16 223,2 м²</p>
                     <p><strong>Этажность Здания:</strong> 6 этажей (Без Подвала)</p>
                     <p><strong>Назначение:</strong> Нежилое</p>
@@ -143,7 +143,7 @@
 
 
     <section class="photo-slider" id="layout">
-        <h2 class="slider-title">Галерея</h2> <!-- Заголовок над фото -->
+        <h2 class="slider-title">Фотографии объекта</h2> <!-- Заголовок над фото -->
         <div class="slider-container">
             <!-- Все фотографии слайды -->
             <div class="slider">
@@ -200,7 +200,7 @@
             <!-- Левый текст с описанием расположения -->
             <div class="left-location-text">
                 <h1>Расположение объекта</h1>
-                <p><strong> ТРАНСПОРТНЫЕ АРТЕРИИ:
+                <p><strong style="color: #c00e"> ТРАНСПОРТНЫЕ АРТЕРИИ:
                     </strong>
                     Объект находится в ЮЗАО г
                     Москвы в районе «Южное
@@ -212,7 +212,7 @@
                     объектов отдыха и досуга.
                     Удаление от МКАД –8,5 км</p>
 <br>
-                <p><strong>МЕСТОПОЛОЖЕНИЕ:</strong>
+                <p><strong style="color: #c00e;">МЕСТОПОЛОЖЕНИЕ:</strong>
                     Объект расположен в ЮЗАО
                     в районе «Южное Бутово»,
                     рядом с основными
@@ -230,7 +230,7 @@
                     транспортная доступность.
                 </p>
                 <br>
-                <p><strong>ТРАНСПОРТНАЯ 
+                <p><strong style="color: #c00e">ТРАНСПОРТНАЯ 
                     ДОСТУПНОСТЬ:</strong>
                     Объект находится на 
                     удалении–3 км 
@@ -260,19 +260,71 @@
         </div>
     </section>
 
-
-    <!-- Блок Контактов -->
-    <div class="contact-block" id="contacts">
-        <h2>СВЯЖИТЕСЬ С НАМИ:</h2>
-        <p class="phone">+7 911 198 99 00</p>
-        <p class="email">mb15@confidential.ru</p>
-        <p class="share-text">Пожалуйста, поделитесь этой страницей с друзьями. Возможно, кто-то из ваших знакомых
-            мечтает об этой квартире.</p>
+<!-- Блок Контактов -->
+<div class="contact-block" id="contacts">
+    <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+    
+    <!-- Телефон с иконками мессенджеров -->
+    <div class="phone-and-icons">
+        <p class="phone">+7 965 383 4340</p>
+        <!--
+        <div class="messenger-icons">
+            <a href="https://wa.me/79653834340" target="_blank" class="whatsapp-icon" aria-label="WhatsApp">
+                <img src="img/whatsapp-whats-app-svgrepo-com.svg" alt="WhatsApp">
+            </a>
+            <a href="https://t.me/levimikhail" target="_blank" class="telegram-icon" aria-label="Telegram">
+                <img src="img/telegram-svgrepo-com.svg" alt="Telegram">
+            </a>
+        </div>
+        -->
     </div>
+
+    <p class="email">mb15@confidential.ru</p>
+
+    <p class="share-text">Пожалуйста, поделитесь этой страницей с друзьями. Возможно, кто-то из ваших знакомых
+        мечтает об этой квартире.</p>
+    
+    <!-- Завлекательный текст с нажимной ссылкой -->
+    <p class="additional-text" style="font-size: 14px;">
+        Не пропустите! У нас также есть уникальный объект, который идеально подойдёт вам.
+        <a href="https://realtysale.ru/" target="_blank" class="highlight-link">Посмотрите подробности здесь</a>.
+    </p>
+</div>
+
 
     <!-- Футер -->
     <footer class="footer">
+        <img src="img/logo.png">
+        <p>Copyright © ZIPRealty.ru — недвижимость, продажа, покупка и аренда квартир, земельных участков, домов.</p>
     </footer>
+
+
+    <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <img src="img/ArrowCircle.svg" alt="Вверх">
+    </div>
+
+
+
+<!-- Колбэк кнопка -->
+<div class="callback-widget">
+    <button class="callback-button" onclick="toggleCallbackMenu()">
+        <!-- Иконка телефона -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="32px" height="32px">
+            <path d="M6.62 10.79a15.534 15.534 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.12.45 2.33.69 3.48.69a1 1 0 0 1 1 1v3.08a1 1 0 0 1-.9 1c-5.06.43-9.88-1.47-13.42-5.02C4.53 12.47 2.63 7.65 3.06 2.6a1 1 0 0 1 1-.9h3.08a1 1 0 0 1 1 1c0 1.15.24 2.36.69 3.48a1 1 0 0 1-.21 1.11l-2.2 2.2z" />
+        </svg>
+    </button>
+    <!-- Меню с иконками мессенджеров -->
+    <div class="callback-menu" id="callbackMenu">
+        <a href="https://wa.me/79653834340" target="_blank" aria-label="WhatsApp">
+            <img src="img/whatsapp-whats-app-svgrepo-com.svg" alt="WhatsApp">
+        </a>
+        <a href="https://t.me/levimikhail" target="_blank" aria-label="Telegram">
+            <img src="img/telegram-svgrepo-com.svg" alt="Telegram">
+        </a>
+    </div>
+</div>
+
+
 
     <script src="index.js"></script>
     <script src="slider.js"></script>
