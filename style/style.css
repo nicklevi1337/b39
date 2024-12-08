@@ -1,0 +1,510 @@
+/* Подключение шрифта TildaSans */
+@font-face {
+    font-family: 'TildaSans';
+    src: url('TildaSans.woff2') format('woff2'),
+         url('TildaSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: #fff;
+  font-family: 'TildaSans', Arial, sans-serif;
+}
+
+/* Хедер */
+.header {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header .nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header .nav a:hover {
+  text-decoration: underline;
+}
+
+/* Первый блок */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../img/1.webp') no-repeat center center/cover;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+  padding-top: 200px;
+}
+
+.hero-title {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 100px;
+  font-weight: 600;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+.hero-text p {
+  font-size: 68px;
+  font-weight: 600;
+  color: #ff0000;
+  margin: 5px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header .logo {
+    font-size: 18px;
+  }
+
+  .header .nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 32px;
+  }
+}
+
+/* Базовые стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 20px; /* Отступ сверху для логотипа и меню */
+}
+
+.burger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.burger-menu a:hover {
+  text-decoration: underline;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 30px; /* Отступ снизу */
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Показывать бургер меню на мобильных устройствах */
+@media (max-width: 1000px) {
+  .burger {
+    display: flex;
+  }
+
+  .header .nav {
+    display: none; /* Скрыть навигацию для мобильных устройств */
+  }
+
+  .burger-menu.open {
+    transform: translateY(0);
+  }
+}
+
+/* Стили для закрытия бургер-меню */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Стили для первого блока (описание) */
+.description-block {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #eeeeee;
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Центрируем контейнер горизонтально */
+}
+
+/* Контейнер для управления текстом */
+.container {
+  display: flex;
+  justify-content: space-between; /* Горизонтальное расположение для десктопа */
+  align-items: flex-start; /* Выравнивание по верху */
+  max-width: 960px; /* Ограничение ширины контейнера */
+  margin: 0 auto; /* Центрируем контейнер */
+  gap: 40px; /* Расстояние между колонками */
+  padding: 0 20px; /* Боковые отступы для небольших экранов */
+}
+
+.left-text, .right-text {
+  width: 48%; /* Колонки занимают равную ширину */
+  text-align: left; /* Текст выравнен по левому краю */
+}
+
+.left-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.left-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.right-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.right-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px; /* Отступы между абзацами */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: flex-start; /* Выравнивание содержимого по левому краю */
+    gap: 20px; /* Расстояние между блоками уменьшается */
+    padding: 0 20px; /* Отступы по бокам */
+  }
+
+  .left-text, .right-text {
+    width: 100%; /* Полная ширина для текста */
+    text-align: left; /* Текст выравнен по левому краю */
+  }
+
+  .left-text {
+    order: 1; /* Поднимаем текст слева наверх */
+  }
+
+  .right-text {
+    order: 2; /* Перемещаем текст справа вниз */
+  }
+}
+
+
+
+
+
+/* Основные стили для информации */
+.info-block {
+  padding: 140px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  color: #000;
+}
+
+.info-block h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column; /* Иконка над текстом */
+  align-items: center; /* Центрирование содержимого */
+  width: 48%; /* Половина ширины для каждого блока */
+  text-align: left; /* Текст по левому краю */
+}
+
+.info-item .icon {
+  margin-bottom: 20px; /* Отступ между иконкой и текстом */
+  width: 60px; /* Размер иконки */
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.info-item .icon img {
+  width: 100%;
+  height: auto;
+}
+
+.info-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.info-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0; /* Отступы между параграфами */
+}
+
+/* Дополнительные стили */
+.red-text {
+  color: red; /* Красный текст */
+  font-weight: bold; /* Жирный шрифт для акцента */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 960px) {
+  .info-container {
+      flex-direction: column; /* Вертикальное расположение */
+      align-items: center; /* Центрирование блоков */
+  }
+
+  .info-item {
+      width: 100%; /* Полная ширина для блоков */
+      text-align: left; /* Текст по левому краю */
+  }
+
+  .info-item .icon {
+      margin-bottom: 10px; /* Отступ между иконкой и текстом */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Основной контейнер для слайдера */
+.photo-slider {
+  position: relative;
+  width: 100%;
+  max-width: 960px; /* Ограничиваем максимальную ширину */
+  margin: 0 auto; /* Центрируем слайдер */
+  text-align: center; /* Выравниваем заголовок по центру */
+}
+
+.slider-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Контейнер для всех слайдов */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Скрываем элементы, которые выходят за пределы */
+}
+
+/* Все слайды */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Плавное переключение слайдов */
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Фотографии будут сохранять свои пропорции */
+}
+
+/* Кнопки переключения слайдов */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 50%; /* Круглая форма кнопок */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Индикаторы (кружочки) */
+.dots {
+  position: relative;
+  top: 20px; /* Располагаем под слайдером */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Добавляем пространство между слайдером и точками */
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(131, 125, 125); /* Серый цвет по умолчанию */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #c40303; /* Белый цвет при наведении */
+}
+
+.active {
+  background-color: #e60000; /* Белый цвет для активной точки */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .slider img {
+    object-fit: cover;
+    height: 300px; /* Устанавливаем фиксированную высоту для мобильных устройств */
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
