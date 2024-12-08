@@ -13,8 +13,8 @@
     <header class="header">
         <div class="logo">Брусилова 39</div>
         <nav class="nav">
-            <a href="#photos">Фотографии</a>
-            <a href="#layout">Планировка</a>
+            <a href="#map">Расположение</a>
+            <a href="#layout">Фотографии</a>
             <a href="#contacts">Контакты</a>
         </nav>
 
@@ -31,8 +31,8 @@
                 <div class="logo">Брусилова 39</div>
                 <button class="close-btn" onclick="closeMenu()">×</button>
             </div>
-            <a href="#photos" onclick="closeMenu()">Фотографии</a>
-            <a href="#layout" onclick="closeMenu()">Планировка</a>
+            <a href="#map" onclick="closeMenu()">Расположение</a>
+            <a href="#layout" onclick="closeMenu()">Фотографии</a>
             <a href="#contacts" onclick="closeMenu()">Контакты</a>
         </div>
     </header>
@@ -41,49 +41,68 @@
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Новый дом</h1>
-        </div>
-        <div class="hero-text">
-            <p>НОВАЯ</p>
-            <p>КВАРТИРА</p>
-            <p>БЕЗУПРЕЧНОСТЬ</p>
+            <h1 class="hero-title">БРУСИЛОВА 39</h1>
         </div>
     </section>
+
+
 
 
 
     <section class="description-block">
         <div class="container">
-        <div class="left-text">
-            <h2>Нежилое здание гаражного комплекса</h2>
-            <h3> Общей площадью 16 232 м²</h3>
-            <h3> Земельный участок 6 286 м²</h3>
-            <br>
-            <p style="color: #666;">Москва, ул.Брусилова, д.39</p>
+            <!-- Левый текст сверху -->
+            <div class="top-left-text">
+                <h1>Нежилое здание гаражного комплекса</h1>
+                <h3 class="subheading">Общая площадь - 16 232 м²</h3>
+                <h3 class="subheading">Земельный участок - 6 286 м²</h3>
+            </div>
+
+            <!-- Блок с изображением и правым текстом -->
+            <div class="image-text-row">
+                <!-- Изображение слева -->
+                <div class="left-image">
+
+                    <img src="img/maket.png" alt="Image description" class="image-1" />
+
+                    <p style="color: #666;">Москва, ул.Брусилова, д.39</p>
+
+                </div>
+                <!-- Правый текст справа от изображения -->
+                <div class="right-text">
+                    <h3>Информация по земельному участку</h3>
+                    <br>
+                    <p><strong>Категория земель:</strong> Земли населённых пунктов</p>
+                    <br>
+                    <p><strong>Вид разрешенного использования:</strong></p>
+                    <p>- Хранение автотранспорта;</p>
+                    <p>- Бытовое обслуживание;</p>
+                    <p>- Магазины;</p>
+                    <p>- Служебные гаражи;</p>
+                    <p>- Автомобильные мойки;</p>
+                    <p>- Ремонт автомобилей</p>
+                    <br>
+                    <p> Кадастровый номер: <strong>77:06:0012020:1074</strong></p>
+                </div>
+            </div>
         </div>
-        <div class="right-text">
-            <h3>Информация по земельному участку</h3>
-            <br>
-            <p><strong>Категория земель:</strong> Земли населённых пунктов</p>
-            <br>
-            <p><strong>Вид разрешенного использования:</strong></p>
-            <p>2.7.1 - Хранение автотранспорта;</p>
-            <p>3.3 - Бытовое обслуживание;</p>
-            <p>4.4 - Магазины;</p>
-            <p>4.9 - Служебные гаражи;</p>
-            <p>4.9.1.3 - Автомобильные мойки;</p>
-            <p>4.9.1.4 - Ремонт автомобилей</p>
-               <br>
-               <p> Кадастровый номер: <strong>77:06:0012020:1074</strong>
-            </p>
-        </div>
-    </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section class="info-block">
         <h2>Описание объекта</h2>
-    
+
         <div class="info-container">
             <!-- Левый блок -->
             <div class="info-item">
@@ -93,15 +112,15 @@
                 <div class="info-content">
                     <h3>Информация по зданию</h3>
                     <p><strong>Площадь Здания:</strong> S = 16 223,2 м²</p>
-                <p><strong>Этажность Здания:</strong> 6 этажей (Без Подвала)</p>
-                <p><strong>Назначение:</strong> Нежилое</p>
-                <p><strong>Год постройки:</strong> 2011 год</p>
-                <p><strong>Стены:</strong> Монолитные</p>
-                <p><strong>Кадастр. номер:</strong> 77:00:0000000:16068</p>
-                <p><strong>Кадастр. стоимость:</strong> 556 423 638,06 руб</p>
+                    <p><strong>Этажность Здания:</strong> 6 этажей (Без Подвала)</p>
+                    <p><strong>Назначение:</strong> Нежилое</p>
+                    <p><strong>Год постройки:</strong> 2011 год</p>
+                    <p><strong>Стены:</strong> Монолитные</p>
+                    <p><strong>Кадастр. номер:</strong> 77:00:0000000:16068</p>
+                    <p><strong>Кадастр. стоимость:</strong> 556 423 638,06 руб</p>
                 </div>
             </div>
-    
+
             <!-- Правый блок -->
             <div class="info-item">
                 <div class="icon">
@@ -109,8 +128,10 @@
                 </div>
                 <div class="info-content">
                     <h3>Технические параметры</h3>
-                    <p><strong>Сети и инженерия:</strong> Централизованные коммуникации подведенные к зданию: электроснабжение.</p>
-                    <p><span class="red-text">Отопление, водоотведение, холодное и горячее водоснабжение, - отсутствуют.</span></p>
+                    <p><strong>Сети и инженерия:</strong> Централизованные коммуникации подведенные к зданию:
+                        электроснабжение.</p>
+                    <p><span class="red-text">Отопление, водоотведение, холодное и горячее водоснабжение, -
+                            отсутствуют.</span></p>
                     <p><strong>Несущие конструкции:</strong> Монолитные стены. Железобетонные перекрытия.</p>
                     <p><strong>Состояние отделки:</strong> Внутреннее состояние помещений и коммуникаций – хорошее.</p>
                     <p>Многоярусный наземный паркинг. Продажа имущества города совместно с земельным участком.</p>
@@ -121,7 +142,7 @@
 
 
 
-    <section class="photo-slider">
+    <section class="photo-slider" id="layout">
         <h2 class="slider-title">Галерея</h2> <!-- Заголовок над фото -->
         <div class="slider-container">
             <!-- Все фотографии слайды -->
@@ -145,12 +166,12 @@
                 <img src="img/17.jpg" alt="Фото 17">
                 <!-- Добавьте остальные фотографии -->
             </div>
-            
+
             <!-- Кнопки для переключения слайдов -->
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    
-      
+
+
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -173,46 +194,85 @@
         </div>
     </section>
 
-    
-    <section class="info-block">
-        <h2>Описание объекта</h2>
-    
-        <div class="info-container">
-            <!-- Левый блок -->
-            <div class="info-item">
-                <div class="icon">
-                    <img src="img/home-button.png" alt="Иконка дома">
-                </div>
-                <div class="info-content">
-                    <h3>Информация по зданию</h3>
-                    <p><strong>Площадь Здания:</strong> S = 16 223,2 м²</p>
-                <p><strong>Этажность Здания:</strong> 6 этажей (Без Подвала)</p>
-                <p><strong>Назначение:</strong> Нежилое</p>
-                <p><strong>Год постройки:</strong> 2011 год</p>
-                <p><strong>Стены:</strong> Монолитные</p>
-                <p><strong>Кадастр. номер:</strong> 77:00:0000000:16068</p>
-                <p><strong>Кадастр. стоимость:</strong> 556 423 638,06 руб</p>
-                </div>
+
+    <section class="location-block" id="map">
+        <div class="location-container">
+            <!-- Левый текст с описанием расположения -->
+            <div class="left-location-text">
+                <h1>Расположение объекта</h1>
+                <p><strong> ТРАНСПОРТНЫЕ АРТЕРИИ:
+                    </strong>
+                    Объект находится в ЮЗАО г
+                    Москвы в районе «Южное
+                    Бутово» в зоне
+                    современной жилой
+                    застройки,в окружении
+                    объектов социальной
+                    инфраструктуры города и
+                    объектов отдыха и досуга.
+                    Удаление от МКАД –8,5 км</p>
+<br>
+                <p><strong>МЕСТОПОЛОЖЕНИЕ:</strong>
+                    Объект расположен в ЮЗАО
+                    в районе «Южное Бутово»,
+                    рядом с основными
+                    транспортными улицами и
+                    автомагистралями:
+                    Симферопольское шоссе
+                    (М2) – 500 м
+                    Варшавское шоссе – 1,8 км
+                    ул. Маршала Савицкого
+                    250м
+                    Обводная дорога –1,5 км
+                    МКАД – 8,5 км
+                    Удовлетворительная
+                    пешеходная и хорошая
+                    транспортная доступность.
+                </p>
+                <br>
+                <p><strong>ТРАНСПОРТНАЯ 
+                    ДОСТУПНОСТЬ:</strong>
+                    Объект находится на 
+                    удалении–3 км 
+                    (30минутпешком) 
+                    от станции «Щербинка»
+                     Курского направления 
+                    МЖД. Станций
+                     Московского 
+                    метрополитена в 
+                    пешеходной доступности 
+                    в ближайшемокружении 
+                    нет.
+                </p>
             </div>
-    
-            <!-- Правый блок -->
-            <div class="info-item">
-                <div class="icon">
-                    <img src="img/settings.png" alt="Иконка шестеренок">
+
+            <!-- Блок с двумя изображениями справа -->
+            <div class="right-images-row">
+                <div class="location-image">
+                    <img src="img/2.jpg" alt="Location Image 1" />
                 </div>
-                <div class="info-content">
-                    <h3>Технические параметры</h3>
-                    <p><strong>Сети и инженерия:</strong> Централизованные коммуникации подведенные к зданию: электроснабжение.</p>
-                    <p><span class="red-text">Отопление, водоотведение, холодное и горячее водоснабжение, - отсутствуют.</span></p>
-                    <p><strong>Несущие конструкции:</strong> Монолитные стены. Железобетонные перекрытия.</p>
-                    <p><strong>Состояние отделки:</strong> Внутреннее состояние помещений и коммуникаций – хорошее.</p>
-                    <p>Многоярусный наземный паркинг. Продажа имущества города совместно с земельным участком.</p>
+                <div class="location-image">
+                    <div class="map-container">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f4cc06cb050432d5bf399440b1cbbef23815162600579afe012e5e7ba0cff5a&amp;source=constructor" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
 
+
+    <!-- Блок Контактов -->
+    <div class="contact-block" id="contacts">
+        <h2>СВЯЖИТЕСЬ С НАМИ:</h2>
+        <p class="phone">+7 911 198 99 00</p>
+        <p class="email">mb15@confidential.ru</p>
+        <p class="share-text">Пожалуйста, поделитесь этой страницей с друзьями. Возможно, кто-то из ваших знакомых
+            мечтает об этой квартире.</p>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+    </footer>
 
     <script src="index.js"></script>
     <script src="slider.js"></script>
