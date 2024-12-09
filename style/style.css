@@ -186,16 +186,15 @@ body {
 
 
 .circle {
-  display: inline-block;
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
   background-color: #c00e; /* Красный фон */
   color: white;
   font-weight: bold;
   border-radius: 50%; /* Круглая форма */
-  text-align: center;
-  line-height: 80px; /* Выравнивание текста по центру */
   font-size: 36px; /* Большой шрифт по умолчанию */
-  vertical-align: middle; /* Выровнять по вертикали с текстом */
-  margin-left: 20px; /* Отступ между текстом и кругом */
+ 
 }
 
 /* От 320px до 560px - маленький круг */
@@ -204,8 +203,7 @@ body {
     width: 60px; /* Маленький круг */
     height: 60px; /* Маленький круг */
     font-size: 25px; /* Маленький шрифт */
-    line-height: 65px; /* Выравнивание текста по центру */
-    margin-left: 15px; /* Отступ для маленьких экранов */
+  
   }
 }
 
@@ -215,8 +213,7 @@ body {
     width: 60px; /* Чуть больше круг */
     height: 60px; /* Чуть больше круг */
     font-size: 24px; /* Чуть больший шрифт */
-    line-height: 60px; /* Выравнивание текста по центру */
-    margin-left: 20px; /* Отступ для средних экранов */
+   
   }
 }
 
@@ -226,8 +223,7 @@ body {
     width: 80px; /* Нормальный круг */
     height: 80px; /* Нормальный круг */
     font-size: 36px; /* Нормальный шрифт */
-    line-height: 80px; /* Выравнивание текста по центру */
-    margin-left: 20px; /* Отступ для больших экранов */
+    
   }
 }
 
@@ -254,6 +250,11 @@ body {
   position: relative;
   padding-left: 20px; /* Отступ слева для текста */
   padding-top: 40vh; /* Отступ сверху для центрирования */
+}
+.hero-title-container {
+  display: flex; /* Включаем Flexbox */
+  align-items: center; /* Выравниваем элементы по центру вертикально */
+  gap: 20px; /* Отступ между текстом и кругом */
 }
 
 .hero-title {
