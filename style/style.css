@@ -1089,7 +1089,7 @@ body {
 .price-block {
   padding-left:20px;
   padding-right:20px;
-padding-bottom: 140px;
+  padding-bottom: 140px;
   background-color: #fffdfb; /* Светлый фон для секции */
 }
 
@@ -1146,7 +1146,7 @@ padding-bottom: 140px;
 }
 
 .rent-price {
-  color: rgba(255, 255, 255, 0.933); /* Красный цвет для аренды */
+  color: rgba(255, 255, 255, 0.933); /* Красный цвет для продажи */
 }
 
 /* Адаптивность */
