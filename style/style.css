@@ -1086,75 +1086,77 @@ body {
 
 
 /* Блок цен */
-.price-section {
-  padding-top: 140px;
-  padding-bottom: 140px;
-  background-color: #f8f8f8; /* Фон блока */
-}
-
-.price-container {
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
+.price-block {
+  padding-left:20px;
+  padding-right:20px;
+padding-bottom: 140px;
+  background-color: #fffdfb; /* Светлый фон для секции */
 }
 
 .price-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.price-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.price-label {
-  font-size: 44px;
-  font-weight: bold;
-  color: #333;
-}
-
-.price-values {
-  display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.price {
+.price-item {
   flex: 1;
-  padding: 20px;
-
-  border-radius: 8px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #333;
   text-align: center;
 }
 
+.price-icon img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px; /* Отступ под иконкой */
+}
+
+.price-description {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px; /* Отступ над текстом "ПРОДАЖА" и "АРЕНДА" */
+  margin-bottom: 15px; /* Отступ под текстом "ПРОДАЖА" и "АРЕНДА" */
+}
+
+.price-content {
+  background-color: #c00e;
+  border: 2px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.price-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .sale-price {
- 
-  color: #c00e;
+  color: rgba(255, 255, 255, 0.933); /* Красный цвет для продажи */
 }
 
 .rent-price {
-  
-  color: #c00e;
+  color: rgba(255, 255, 255, 0.933); /* Красный цвет для аренды */
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .price-title {
-    flex-direction: row;
-    gap: 10px;
+  .price-container {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .price-values {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .price-label {
-    font-size: 20px;
-  }
-
-  .price {
-    font-size: 17px;
+  .price-item {
+    width: 100%;
   }
 }
