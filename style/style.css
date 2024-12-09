@@ -687,6 +687,8 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
 }
 
 .email {
@@ -1062,3 +1064,76 @@ body {
 }
 
 
+/* Блок цен */
+.price-section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #f8f8f8; /* Фон блока */
+}
+
+.price-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  font-size: 44px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.price {
+  flex: 1;
+  padding: 20px;
+
+  border-radius: 8px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.sale-price {
+ 
+  color: #c00e;
+}
+
+.rent-price {
+  
+  color: #c00e;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .price-title {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .price-values {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .price-label {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 17px;
+  }
+}
