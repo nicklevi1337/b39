@@ -5,6 +5,26 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+
+/* Отключаем автоматическое преобразование номеров в ссылки на iOS */
+a[href^="tel"], a[href^="sms"], a[href^="mailto"], a[href^="#"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+.number, .email {
+  -webkit-touch-callout: none; /* Отключаем вызов ссылок при длительном нажатии */
+  -webkit-user-select: none; /* Запрещаем выделение текста */
+  user-select: none; /* Для остальных браузеров */
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* Отключаем автоматическое изменение размера текста */
+}
+
+
 /* Общие стили */
 * {
   margin: 0;
@@ -184,7 +204,7 @@ body {
     width: 60px; /* Маленький круг */
     height: 60px; /* Маленький круг */
     font-size: 25px; /* Маленький шрифт */
-    line-height: 58px; /* Выравнивание текста по центру */
+    line-height: 50px; /* Выравнивание текста по центру */
     margin-left: 15px; /* Отступ для маленьких экранов */
   }
 }
