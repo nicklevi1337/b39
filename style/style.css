@@ -1160,3 +1160,143 @@ body {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общие стили для слайдеров */
+.slider1, .slider2 {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider1 img, .slider2 img {
+  width: 100%;
+  display: none;
+}
+
+.slider1 img:first-child, .slider2 img:first-child {
+  display: block;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Стили для точек (индикаторов) */
+.dots1, .dots2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots1 .dot, .dots2 .dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dots1 .dot.active, .dots2 .dot.active {
+  background-color: #c00e;
+}
+
+/* Стили для секции */
+.related-block {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.object-block {
+  margin-bottom: 30px;
+}
+
+.object-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.object-block p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  button.prev, button.next {
+      padding: 8px 12px;
+  }
+
+  .object-block h3 {
+      font-size: 1.3rem;
+  }
+
+  .object-block p {
+      font-size: 0.9rem;
+  }
+
+  .dots1 .dot, .dots2 .dot {
+      height: 8px;
+      width: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  button.prev, button.next {
+      padding: 6px 10px;
+  }
+
+  .object-block h3 {
+      font-size: 1.2rem;
+  }
+
+  .object-block p {
+      font-size: 0.85rem;
+  }
+
+  .dots1 .dot, .dots2 .dot {
+      height: 6px;
+      width: 6px;
+  }
+}
+@media (min-width: 1200px) {
+  .slider1, .slider2 {
+      max-width: 60%;
+  }
+}
